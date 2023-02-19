@@ -1,24 +1,13 @@
-const container = document.querySelector('.container');
+function fillBoard(size) {
+  let board = document.querySelector('.board');
+  board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-// variable Anzahl an Divs zu container hinzufugen
-function addDivs(num) {
-  for (let i = 0; i < num; i++) {
-    const div = document.createElement('div');
-    container.appendChild(div);
+  for (i = 0; i < size * size; i++) {
+    let pixel = document.createElement('div');
+    pixel.style.backgroundColor = 'grey';
+    board.insertAdjacentElement('beforeend', pixel);
   }
 }
 
-addDivs(256);
-
-// aendert Hintergrundfarbe, sobald Mousehover
-function changeBackgroundColor() {
-  let divs = document.querySelectorAll('.container > div');
-
-  divs.forEach(div => {
-    div.addEventListener('mouseover', function() {
-      div.style.backgroundColor='red';
-    })
-  })
-}
-
-changeBackgroundColor();
+fillBoard(32);

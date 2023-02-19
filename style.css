@@ -1,16 +1,5 @@
-.container {
+.board {
+  height: 600px;
+  width: 600px;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
-  gap: 10px;
-  background-color: #ddd;
-  padding: 10px;
-}
-
-.container > div {
-  height: 40px;
-  width: 40px;
-  border: solid 2px black;
-  text-align: center;
-  background-color: white;
 }
