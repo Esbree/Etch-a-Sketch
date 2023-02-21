@@ -1,5 +1,5 @@
 let board = document.querySelector('.board');
-let setSizeHeading = document.querySelector('h2');
+let setSizeHeading = document.querySelector('h3');
 
 function changeColor() {
   let pixels = document.querySelectorAll('.board > div');
