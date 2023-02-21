@@ -1,6 +1,7 @@
+let board = document.querySelector('.board');
+
 function changeColor() {
   let pixels = document.querySelectorAll('.board > div');
-  
   pixels.forEach(pixel => {
     pixel.addEventListener('mouseover', function() {
       pixel.style.backgroundColor = 'black';
@@ -9,7 +10,6 @@ function changeColor() {
 }
 
 function clearBoard() {
-  let board = document.querySelector('.board');
   board.innerHTML = '';
 }
 
@@ -17,7 +17,6 @@ function fillBoard() {
   clearBoard();
   let inputField = document.querySelector('input').value;
   let size = inputField;
-  let board = document.querySelector('.board');
   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
