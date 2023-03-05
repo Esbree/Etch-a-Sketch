@@ -2,9 +2,9 @@ let board = document.querySelector('.board');
 let setSizeHeading = document.querySelector('h3');
 
 function changeColor() {
-  let pixels = document.querySelectorAll('.board > div');
-  pixels.forEach(pixel => {
-    pixel.addEventListener('mouseover', function() {
+  const pixels = document.querySelectorAll('.board > div');
+  pixels.forEach((pixel) => {
+    pixel.addEventListener('mouseover', () => {
       pixel.style.backgroundColor = 'black';
     })
   })
